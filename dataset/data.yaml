@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 51
+names: ['Allis Forceps', 'Army Navy Retractor', 'Artery Forceps', 'Babcock Forceps', 'Backhaus', 'Backhaus Towel Clamp', 'Bandage Sciccors', 'Catheter Tray', 'Cheatle Forceps', 'Curved Mayo', 'Czerney Retractor', 'Czerny Retractor', 'Deaver Retractor', 'Desjardin Forceps', 'Disscting Forceps', 'Disscting Forceps -Plain-', 'Disscting Forceps -tooth-', 'Dissecting Forceps Plain', 'Dissecting Forceps Tooth', 'Doyel Instestinal Forceps', 'Doyen Cross Action Towel Clamp', 'Eye Intestinal Forceps', 'Harrington Retractor', 'Hrrington retractor', 'Jones Towel Clamp', 'Kelly Retractor', 'Kidney Tray', 'Knife Blade', 'Knife Handle', 'Knife handle', 'Kocher Forceps', 'Lane Tissue Forceps', 'Langenbach Retractor', 'Metzenbaum Sciccors', 'Morris Retractor', 'Needle Holder', 'Protoscope', 'Randall', 'Randall Forceps', 'Rectangle Cholecystectomy Forceps', 'Right Angle Colon Clamp', 'Self Retractor', 'Senn Retractor', 'Skin Stapler', 'Sponge Bowl', 'Sponge Holding Forceps', 'Stapler Remover', 'Straight Mayo', 'Suction Tube Nozzle', 'Surgical blade', 'Urethral Dilators']
+
+roboflow:
+  workspace: fmsurg
+  project: merged_dataset-g0rzs
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/fmsurg/merged_dataset-g0rzs/dataset/1
