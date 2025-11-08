@@ -80,39 +80,39 @@ PROJECT_DIR="/workspace/surgical_tool_detection"
 mkdir -p $PROJECT_DIR
 cd $PROJECT_DIR
 
-# 6. Clone repository
-echo ""
-echo "Step 6: Cloning repository..."
-read -p "Enter your GitHub repository URL (or press Enter to skip): " REPO_URL
+# # 6. Clone repository
+# echo ""
+# echo "Step 6: Cloning repository..."
+# read -p "Enter your GitHub repository URL (or press Enter to skip): " REPO_URL
 
-if [ ! -z "$REPO_URL" ]; then
-    # Extract repo name from URL
-    REPO_NAME=$(basename "$REPO_URL" .git)
+# if [ ! -z "$REPO_URL" ]; then
+#     # Extract repo name from URL
+#     REPO_NAME=$(basename "$REPO_URL" .git)
     
-    if [ -d "$REPO_NAME" ]; then
-        print_warning "Directory $REPO_NAME already exists. Skipping clone."
-    else
-        git clone "$REPO_URL"
-        print_status "Repository cloned successfully"
+#     if [ -d "$REPO_NAME" ]; then
+#         print_warning "Directory $REPO_NAME already exists. Skipping clone."
+#     else
+#         git clone "$REPO_URL"
+#         print_status "Repository cloned successfully"
         
-        # Check if YOLO_v12_train directory exists in the repo
-        if [ -d "$REPO_NAME/YOLO_v12_train" ]; then
-            print_status "Found YOLO_v12_train directory"
-            cd "$REPO_NAME/YOLO_v12_train"
-        fi
-    fi
-else
-    print_warning "Skipping git clone. Creating empty directory structure..."
-    mkdir -p base_models
-    mkdir -p dataset/images/train
-    mkdir -p dataset/images/val
-    mkdir -p dataset/images/test
-    mkdir -p dataset/labels/train
-    mkdir -p dataset/labels/val
-    mkdir -p dataset/labels/test
-    mkdir -p runs/detect
-    print_status "Project directory created at $PROJECT_DIR"
-fi
+#         # Check if YOLO_v12_train directory exists in the repo
+#         if [ -d "$REPO_NAME/YOLO_v12_train" ]; then
+#             print_status "Found YOLO_v12_train directory"
+#             cd "$REPO_NAME/YOLO_v12_train"
+#         fi
+#     fi
+# else
+#     print_warning "Skipping git clone. Creating empty directory structure..."
+#     mkdir -p base_models
+#     mkdir -p dataset/images/train
+#     mkdir -p dataset/images/val
+#     mkdir -p dataset/images/test
+#     mkdir -p dataset/labels/train
+#     mkdir -p dataset/labels/val
+#     mkdir -p dataset/labels/test
+#     mkdir -p runs/detect
+#     print_status "Project directory created at $PROJECT_DIR"
+# fi
 
 # 7. Download YOLO model weights
 echo ""
