@@ -76,7 +76,7 @@ print_status "PyTorch verified"
 # 5. Create project directory structure
 echo ""
 echo "Step 5: Setting up project directory..."
-PROJECT_DIR="/workspace/surgical_tool_detection"
+PROJECT_DIR="/workspace/sur_tool_train"
 mkdir -p $PROJECT_DIR
 cd $PROJECT_DIR
 
